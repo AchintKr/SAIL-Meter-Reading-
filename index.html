@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSL</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+    {% comment %} <link rel="stylesheet" type="text/css" href="style.css"> {% endcomment %}
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar bg-body-tertiary bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="static/logo.png" alt="Logo" class="Sail-logo" style="margin: 0px 20px 0px 13px;" width="49" height="40">
+        BOKARO STEEL CITY
+      </a>
+      <div style="
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  ">
+      <nav class="navbar navbar-expand-lg center navbar-light bg-primary-light" style="background-color: cornflowerblue;color: aqua;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">CPRS</a></li>
+                  <li><a class="dropdown-item" href="#">BGH(HIMS)</a></li>
+                  <li><a class="dropdown-item" href="#">BOKAROSTEEL.COM (INTRANET)</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Employee Corner</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CRPS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </nav>
+    </div>
+    <div style=" position: absolute;top: 2%;left:94%;">
+    <a href="login/" class="btn btn-primary" style="font-size: inherit;">Login</a></div>
+  </nav>
+  <div class="section1">
+    <div class="row gx-lg-5 align-items-center text-center shadow py-3">
+      <h3 class="my-1 display-7 fw-bold ls-tight">
+        <div class="">
+          <img src="static/logo.png" width="50" height="50" alt="Bokaro Steel Plant">
+          <span class="" style="color: #143670">EMPLOYEE - DESK</span>
+
+        </div>
+
+      </h3>
+      <p class="text-success">
+        An integrated Employee Services portal for SAIL - Bokaro Steel Plant. Login for related queries.
+      </p>
+
+    </div>
+  </div>
+  <div class="section2">
+    <div class="px-4 py-3 px-md-3 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+          <div class="col-md-6 mb-3 mb-lg-0"> <!-- start of notice board -->
+            <!-- Recent Activity -->
+            <div class="card">
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Recent Activity <span>| Today</span></h5>
+                <div class="activity">
+                  <div class="activity-item d-flex">
+                    <div class="activite-label"></div>
+                    <i class="bi bi-circle-fill activity-badge text-success align-self-start"></i>
+                    <div class="activity-content">
+                    </div>
+                  </div><!-- End activity item-->
+                </div>
+              </div>
+            </div><!-- End Recent Activity -->
+          </div> <!-- end of notice board -->
+          <div class="col-md-6 mb-3 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <form method="POST">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="form3Example1">Enter BSL Staff No for Sign In </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- STaff number input -->
+                  <div class="mb-4">
+                    <label class="form-label text-primary" for="form3Example3">BSL Staff No:</label>
+                    <input name="username" type="text" id="form3Example3" class="form-control" autofocus=""
+                      autocapitalize="none" autocomplete="username" maxlength="7" required="">
+                  </div>
+                  <!-- Password input -->
+                  <div class="mb-4">
+                    <label class="form-label text-primary" for="form3Example4">Password:</label>
+                    <i class="fas fa-info-circle fa-xs fa-fw text-warning " data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Use Domain password. If domain password is not available reset new password from link below"></i>
+                    <input name="password" type="password" id="form3Example4" class="form-control"
+                      autocomplete="current-password" required="">
+                  </div>
+                  <!-- Checkbox -->
+                  <div class="form-check d-flex justify-content-center mb-4">
+                  </div>
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block mb-4">
+                    Login
+                  </button>
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <a href="/reset_password">
+                      <p>Reset password?</p>
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <a href="/signup">
+                      <p>New User Click to Register</p>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Section3">
+    <div class="row">
+      <h4 class="text-center text-dark">Services</h4>
+  </div>
+  <div class="row justify-content-center align-items-center gap-5 "> <!--start of card row-->
+    <div class="card text-dark bg-info mb-3 gx-2 shadow" style="max-width: 18rem;">
+        <a href="https://bspapp.sail-bhilaisteel.com/cprs/cprs_login.htm" target="_blank" rel="noopener noreferrer">
+        <div class="card-header text-dark"><h5>CPRS- Centralized Payroll System</h5> </div>
+        <div class="card-body  text-center">
+          
+          <i class="fas fa-money-bill fa-5x fa-fw text-light"></i>
+        </div>
+    </a>
+      </div>
+      <div class="card text-dark bg-danger mb-3 gx-2 shadow" style="max-width: 18rem;">
+        <a href="/health/hims" target="_blank" rel="noopener noreferrer">
+        <div class="card-header text-dark"> <h5>HIMS - Bokaro General Hospital</h5></div>
+        <div class="card-body text-center">
+          
+          <i class="fas fa-hospital fa-5x fa-fw text-light"></i>
+        </div>
+    </a>
+    </div>
+
+        <div class="card text-dark bg-primary mb-3 gx-2 shadow" style="max-width: 18rem;">
+            <a href="http://bokarosteel.com" target="_blank" rel="noopener noreferrer">
+            <div class="card-header text-dark"> <h5>BOKAROSTEEL INTRANET</h5></div>
+            <div class="card-body text-center">
+              
+              <i class="fas fa-link fa-5x fa-fw text-light"></i>
+            </div>
+        </a>
+        </div>   
+</div>
+  </div>
+  <footer class="Develop">
+    <div class="row align-items-center text-center">
+      <div class="col-md-6">
+          <p>Developed &amp; maintained By : Team C&amp;IT BSL</p>
+      </div>
+      <div class="col-md-6 ">
+          <a href="#" class="text-dark">Terms of Use</a>
+          <span class="text-muted mx-2">|</span>
+          <a href="#" class="text-dark">Privacy Policy</a>
+      </div>
+  </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+{% block body %} 
+<div class="container px-0 w-50 h-50">
+    <img src="https://picsum.photos/500/600?contact" width="500" height="600" class="d-block w-100 mx-0"> </img>
+</div> 
+
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+ <b> {{ message }}</b>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
+{% endif %}
+<h1 class="text-center"> Contact Page</h1>
+<div class="container my-4 bg-light">
+    <form class="row g-3" method="POST">
+      {% csrf_token %}
+        <div class="col-md-6">
+            <label for="inputname" class="form-label">Name</label>
+            <input type="text" class="form-control" id="inputname" name = "name" placeholder="Enter YOur Name">
+          </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="ENter your email" name="email">
+    </div>
+    <div class="col-md-6">
+      <label for="desc" class="form-label">Why Do you want to contact me ?</label>
+      <input type="text" class="form-control" id="desc" placeholder="Enter What Ever in Your Mind " name="desc">
+    </div>
+    <div class="col-12">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="phone" class="form-control" id="phone" placeholder="Enter Your phone number " name="phone">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" placeholder="ENter Your CIty" name="city">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="ENter Your STate" name="state">
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip" name="zip">
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Example file input</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="File_image">
+      
+      <div class="col-6 img-fluid">
+      <img src="media/{{file_url}}" alt="..."/>
+      </div>
+    </div>
+   
+    
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form></div>
+{% endblock body %}
+
+{% block body1 %}
+{% endblock body1 %} {% endcomment %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="animate__animated animate__fadeInUp">Contact Us</h1>
+            <p class="lead animate__animated animate__fadeInUp">We're here to help. Please fill out the form below and we'll get back to you as soon as possible.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="static/naamste.jpeg" class="img-fluid rounded animate__animated animate__fadeInRight" alt="Contact Image">
+        </div>
+    </div>
+
+    {% if messages %}
+    <div class="alert alert-dismissible alert-info fade show mt-4 animate__animated animate__fadeIn" role="alert">
+        {% for message in messages %}
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="card my-4 animate__animated animate__fadeInUp">
+        <div class="card-body">
+            <form method="POST" enctype="multipart/form-data" class="animate__animated animate__fadeInUp">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="inputname" class="form-label">Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="inputname" name="name" placeholder="Enter Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="inputEmail4" class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Message <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="desc" placeholder="Enter your message" name="desc" rows="4" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter Your phone number" name="phone" required>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">City <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Enter Your City" name="city" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">State <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="inputState" placeholder="Enter Your State" name="state" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputZip" class="form-label">Meter Reading</label>
+                        <input type="text" class="form-control" id="inputZip" name="zip">
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlFile1">Example file input</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1" name="File_image" onchange="previewImage(event)">
+              </div>
+              <div class="col-6 img-fluid">
+                  <img id="imagePreview" src="{% if file_url %}{{ file_url }}{% endif %}" alt="Image Preview" style="max-width: 100%; height: auto;">
+              </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary animate__animated animate__fadeInUp">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Preview uploaded image
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('imagePreview');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+{% endblock body %}
+
+{% block body1 %}
+{% endblock body1 %}
